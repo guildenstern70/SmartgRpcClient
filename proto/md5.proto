@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "net.littlelite";
+option java_outer_classname = "Md5gRpcProto";
+option go_package = "github.com/guildenstern70/grpcclient";
+
+package smartgrpcproto;
+
+service Md5Grpc {
+    rpc Md5Service (Md5Request) returns (Md5Reply) {}
+}
+
+message Md5Request {
+    string stringToHash = 1;
+}
+
+message Md5Reply {
+    string hashCode = 1;
+}

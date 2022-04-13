@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "net.littlelite";
+option java_outer_classname = "HypotenusegRpcProto";
+option go_package = "github.com/guildenstern70/grpcclient";
+
+package smartgrpcproto;
+
+service HypotenuseGrpc {
+  rpc HypotenuseService (TriangleRequest) returns (HypotenuseReply) {}
+}
+
+message TriangleRequest {
+  double leg1 = 1;
+  double leg2 = 2;
+}
+
+message HypotenuseReply {
+  double hypotenuse = 1;
+}
