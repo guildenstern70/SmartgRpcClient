@@ -15,10 +15,10 @@ https://github.com/guildenstern70/SmartgRpc
 
 ### Protoc Go Gen Files
 
-Be sure to locally install the latest version of Go files generator for protoc, here
+Be sure to locally install the latest version of Go files generator for protoc, here:
 
-   go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
-   go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+    go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+    go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 
 ### Server gRPC
 
@@ -28,12 +28,11 @@ https://github.com/guildenstern70/SmartgRpc
 
 ### Generate client code
 
-1. Md5 Service
+Md5 Service 
 
-   protoc --go_out=./out --go_opt=paths=source_relative --go-grpc_out=./out --go-grpc_opt=paths=source_relative ./proto/md5.proto
+    protoc --go_out=./out --go_opt=paths=source_relative --go-grpc_out=./out --go-grpc_opt=paths=source_relative ./proto/md5.proto
 
+Hypotenuse
 
-2. Hypotenuse
-
-   protoc --go_out=./out --go_opt=paths=source_relative --go-grpc_out=./out --go-grpc_opt=paths=source_relative ./proto/hypotenuse.proto
+    protoc --go_out=./out --go_opt=paths=source_relative --go-grpc_out=./out --go-grpc_opt=paths=source_relative ./proto/hypotenuse.proto
     
